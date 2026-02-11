@@ -50,7 +50,6 @@ void displayEntries(const std::vector<TimesheetEntry>& entries) {
 void handleCheckIn(TimesheetDB& db) {
     std::string employee_name;
     std::cout << "\nEnter employee name: ";
-    std::cin.ignore();
     std::getline(std::cin, employee_name);
     
     if (employee_name.empty()) {
@@ -70,7 +69,6 @@ void handleCheckOut(TimesheetDB& db) {
     std::string tasks;
     
     std::cout << "\nEnter employee name: ";
-    std::cin.ignore();
     std::getline(std::cin, employee_name);
     
     if (employee_name.empty()) {
@@ -103,7 +101,6 @@ void handleViewAll(TimesheetDB& db) {
 void handleViewByEmployee(TimesheetDB& db) {
     std::string employee_name;
     std::cout << "\nEnter employee name: ";
-    std::cin.ignore();
     std::getline(std::cin, employee_name);
     
     if (employee_name.empty()) {
@@ -139,6 +136,8 @@ int main() {
             std::cout << "\nInvalid input. Please enter a number.\n";
             continue;
         }
+        
+        std::cin.ignore(10000, '\n');
         
         switch (choice) {
             case 1:
