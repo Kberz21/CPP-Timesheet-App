@@ -163,22 +163,22 @@ std::vector<TimesheetEntry> TimesheetDB::getEntries(const std::string& employee_
     while (sqlite3_step(stmt) == SQLITE_ROW) {
         TimesheetEntry entry;
         entry.id = sqlite3_column_int(stmt, 0);
-        entry.employee_name = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 1));
-        entry.check_in_time = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 2));
+        entry.employee_name = std::string(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 1)));
+        entry.check_in_time = std::string(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 2)));
         
         if (sqlite3_column_type(stmt, 3) != SQLITE_NULL) {
-            entry.check_out_time = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 3));
+            entry.check_out_time = std::string(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 3)));
         } else {
             entry.check_out_time = "N/A";
         }
         
         if (sqlite3_column_type(stmt, 4) != SQLITE_NULL) {
-            entry.tasks = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 4));
+            entry.tasks = std::string(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 4)));
         } else {
             entry.tasks = "N/A";
         }
         
-        entry.date = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 5));
+        entry.date = std::string(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 5)));
         entries.push_back(entry);
     }
     
@@ -203,22 +203,22 @@ std::vector<TimesheetEntry> TimesheetDB::getTodayEntries() {
     while (sqlite3_step(stmt) == SQLITE_ROW) {
         TimesheetEntry entry;
         entry.id = sqlite3_column_int(stmt, 0);
-        entry.employee_name = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 1));
-        entry.check_in_time = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 2));
+        entry.employee_name = std::string(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 1)));
+        entry.check_in_time = std::string(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 2)));
         
         if (sqlite3_column_type(stmt, 3) != SQLITE_NULL) {
-            entry.check_out_time = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 3));
+            entry.check_out_time = std::string(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 3)));
         } else {
             entry.check_out_time = "N/A";
         }
         
         if (sqlite3_column_type(stmt, 4) != SQLITE_NULL) {
-            entry.tasks = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 4));
+            entry.tasks = std::string(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 4)));
         } else {
             entry.tasks = "N/A";
         }
         
-        entry.date = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 5));
+        entry.date = std::string(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 5)));
         entries.push_back(entry);
     }
     

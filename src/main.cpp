@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
+#include <limits>
 
 void displayMenu() {
     std::cout << "\n====================================\n";
@@ -132,12 +133,12 @@ int main() {
         
         if (std::cin.fail()) {
             std::cin.clear();
-            std::cin.ignore(10000, '\n');
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             std::cout << "\nInvalid input. Please enter a number.\n";
             continue;
         }
         
-        std::cin.ignore(10000, '\n');
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         
         switch (choice) {
             case 1:
