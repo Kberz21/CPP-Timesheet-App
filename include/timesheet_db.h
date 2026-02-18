@@ -4,14 +4,15 @@
 #include <sqlite3.h>
 #include <string>
 #include <vector>
+using namespace std;
 
 struct TimesheetEntry {
     int id;
-    std::string employee_name;
-    std::string check_in_time;
-    std::string check_out_time;
-    std::string tasks;
-    std::string date;
+    string employee_name;
+    string check_in_time;
+    string check_out_time;
+    string tasks;
+    string date;
 };
 
 class TimesheetDB {

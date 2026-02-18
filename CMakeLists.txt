@@ -15,6 +15,7 @@ include_directories(${SQLite3_INCLUDE_DIRS})
 set(SOURCES
     src/main.cpp
     src/timesheet_db.cpp
+    src/function.cpp
 )
 
 # Create executable

@@ -3,8 +3,9 @@
 #include <ctime>
 #include <iomanip>
 #include <sstream>
+using namespace std;
 
-TimesheetDB::TimesheetDB(const std::string& db_file) : db(nullptr), db_path(db_file) {}
+TimesheetDB::TimesheetDB(const string& db_file) : db(nullptr), db_path(db_file) {}
 
 TimesheetDB::~TimesheetDB() {
     if (db) {
@@ -15,7 +16,7 @@ TimesheetDB::~TimesheetDB() {
 bool TimesheetDB::initialize() {
     int rc = sqlite3_open(db_path.c_str(), &db);
     if (rc != SQLITE_OK) {
-        std::cerr << "Cannot open database: " << sqlite3_errmsg(db) << std::endl;
+        cerr << "Cannot open database: " << sqlite3_errmsg(db) << endl;
         return false;
     }
 

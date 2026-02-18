@@ -1,4 +1,5 @@
 #include "timesheet_db.h"
+#include "function.h"
 #include <iostream>
 #include <string>
 #include <iomanip>
@@ -128,6 +129,7 @@ int main() {
     bool running = true;
     
     while (running) {
+        hello();
         displayMenu();
         std::cin >> choice;
         
