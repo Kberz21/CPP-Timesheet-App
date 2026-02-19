@@ -1,0 +1,20 @@
+[
+{
+  "directory": "C:/Users/Lenovo/GitHub/CPP-Timesheet-App/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/timesheet.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\timesheet.dir\\src\\main.cpp.obj -c C:\\Users\\Lenovo\\GitHub\\CPP-Timesheet-App\\src\\main.cpp",
+  "file": "C:/Users/Lenovo/GitHub/CPP-Timesheet-App/src/main.cpp",
+  "output": "CMakeFiles/timesheet.dir/src/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/Lenovo/GitHub/CPP-Timesheet-App/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/timesheet.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\timesheet.dir\\src\\timesheet_db.cpp.obj -c C:\\Users\\Lenovo\\GitHub\\CPP-Timesheet-App\\src\\timesheet_db.cpp",
+  "file": "C:/Users/Lenovo/GitHub/CPP-Timesheet-App/src/timesheet_db.cpp",
+  "output": "CMakeFiles/timesheet.dir/src/timesheet_db.cpp.obj"
+},
+{
+  "directory": "C:/Users/Lenovo/GitHub/CPP-Timesheet-App/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/timesheet.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\timesheet.dir\\src\\function.cpp.obj -c C:\\Users\\Lenovo\\GitHub\\CPP-Timesheet-App\\src\\function.cpp",
+  "file": "C:/Users/Lenovo/GitHub/CPP-Timesheet-App/src/function.cpp",
+  "output": "CMakeFiles/timesheet.dir/src/function.cpp.obj"
+}
+]
